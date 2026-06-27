@@ -5,11 +5,11 @@ phases:
     commands:
       - echo "Installing security scanning tool"
       - pip3 install checkov
-build:
-  commands:
-    - echo "Running security scan"
-    - checkov -d . --quiet || echo "Security scan completed with findings"
-    - echo "Build completed"
+  build:
+    commands:
+      - echo "Running security scan"
+      - checkov -d . --quiet || echo "Security scan completed with findings"
+      - echo "Build completed"
 
 artifacts:
   files:
